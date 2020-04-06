@@ -61,7 +61,7 @@ func main() {
 		log.Printf("[STARTUP] Traces enabled; storing most recent trace in %q", traceDir)
 		go tracePeriodically(traceDir)
 	}
-	listenAddr := ":" os.Getenv("PORT")
+	listenAddr := ":" + os.Getenv("PORT")
 
 	log.Printf("[STARTUP] Listening on addr %s\n", listenAddr)
 	server := &codenames.Server{
