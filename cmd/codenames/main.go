@@ -15,7 +15,6 @@ import (
 	"github.com/jbowens/codenames"
 )
 
-listenAddr := os.Getenv("PORT")
 const expiryDur = -6 * time.Hour
 
 func main() {
@@ -62,6 +61,7 @@ func main() {
 		log.Printf("[STARTUP] Traces enabled; storing most recent trace in %q", traceDir)
 		go tracePeriodically(traceDir)
 	}
+	listenAddr := os.Getenv("PORT")
 
 	log.Printf("[STARTUP] Listening on addr %s\n", listenAddr)
 	server := &codenames.Server{
