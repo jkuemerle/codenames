@@ -15,7 +15,7 @@ import (
 	"github.com/jbowens/codenames"
 )
 
-const listenAddr = os.Getenv("PORT")
+listenAddr := os.Getenv("PORT")
 const expiryDur = -6 * time.Hour
 
 func main() {
