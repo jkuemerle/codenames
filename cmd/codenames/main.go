@@ -15,7 +15,7 @@ import (
 	"github.com/jbowens/codenames"
 )
 
-const listenAddr = ":9091"
+const listenAddr = os.Getenv("PORT")
 const expiryDur = -6 * time.Hour
 
 func main() {
